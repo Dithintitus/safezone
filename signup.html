@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="./style2.css">
+    <title>Set Emergency Contact</title>
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
+    <h2>Set Your Emergency Contact</h2>
+    <input type="text" id="whatsapp-number" placeholder="Enter WhatsApp Number">
+    <button onclick="saveNumber()">Save Number</button>
     
+    <script>
+        function saveNumber() {
+            let number = document.getElementById("whatsapp-number").value.trim();
+            
+            // Validate the number (Only digits, no + or -)
+            if (!/^\d+$/.test(number)) {
+                alert("Please enter a valid WhatsApp number (digits only, no + or -).");
+                return;
+            }
+
+            localStorage.setItem("emergencyNumber", number);
+            alert("Emergency contact saved!");
+        }
+    </script>
 </body>
 </html>

@@ -1,4 +1,13 @@
 document.getElementById("sos-btn").addEventListener("click", function() {
+    let emergencyNumber = localStorage.getItem("emergencyNumber");
+
+    // Check if the number is set
+    if (!emergencyNumber) {
+        alert("Please set an emergency contact number first!");
+        window.location.href = "settings.html"; // Redirect to settings page
+        return;
+    }
+
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
             var lat = position.coords.latitude;
@@ -6,9 +15,6 @@ document.getElementById("sos-btn").addEventListener("click", function() {
 
             // Generate Google Maps location link
             var locationLink = `https://www.google.com/maps?q=${lat},${lon}`;
-
-            // Emergency contact number (change this)
-            var emergencyNumber = "916282672737";  // Replace with actual emergency contact number
 
             // Message to send
             var message = `🚨 HELP! I am in danger. My live location: ${locationLink}`;
