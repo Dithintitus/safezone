@@ -9,7 +9,9 @@
 <body>
 
     <div class="container">
-        <img src="./images/logo.png">
+        <div class="logo-container flex justify-center">
+            <img src="./images/logo.png" alt="SafeZone Logo" class="logo">
+        </div>
         <p class="subtitle">Emergency Assistance</p>
         
         <div class="sos-container">
@@ -21,10 +23,6 @@
         <!-- Safety Alerts -->
         <div class="section">
             <h2>Safety Alerts</h2>
-            <div class="alert-box">
-                <span class="alert-icon">&#9888;</span>
-                <p>Neighborhood Alert: 2 offenders on parole within 5km radius</p>
-            </div>
             <div class="status-box">
                 <p>Safety Status: Location tracking active</p>
                 <input type="checkbox" class="toggle-switch" checked>
@@ -44,6 +42,7 @@
                 <button class="action-button">Chat</button>
             </div>
         </div>
+        
 
         <!-- Emergency Contacts -->
         <div class="emergency-box">

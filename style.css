@@ -1,165 +1,185 @@
 /* General Styles */
-body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
-}
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
 
-.container {
-    max-width: 400px;
-    margin: auto;
-    background-color: #1a1a1a;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-}
+        .container {
+            padding: 10px;
+            max-width: 400px;
+            margin: auto;
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
 
-h1 {
-    font-size: 24px;
-    font-weight: bold;
-}
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
 
-.subtitle {
-    color: #ccc;
-}
+        .subtitle {
+            color: #ccc;
+        }
 
-/* SOS Button */
-.sos-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
+        /* SOS Button */
+        .sos-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
 
-.sos-button {
-    background-color: red;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-}
+        .sos-button {
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
 
-.tap-text {
-    font-size: 12px;
-    color: #aaa;
-}
+        .tap-text {
+            font-size: 12px;
+            color: #aaa;
+        }
 
-/* Safety Alerts */
-.section {
-    margin-top: 20px;
-}
+        /* Safety Alerts */
+        .section {
+            margin-top: 20px;
+        }
 
-.alert-box {
-    background-color: #4a148c;
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #e1bee7;
-}
+        .status-box {
+            background-color: #333;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
 
-.alert-icon {
-    font-size: 18px;
-}
+        /* Quick Access */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 20px;
+        }
 
-.status-box {
-    background-color: #333;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-}
+        .quick-box {
+            background-color: #222;
+            padding: 15px;
+            border-radius: 5px;
+        }
 
-/* Quick Access */
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: 20px;
-}
+        .quick-box h3 {
+            font-size: 16px;
+        }
 
-.quick-box {
-    background-color: #222;
-    padding: 15px;
-    border-radius: 5px;
-}
+        .quick-box p {
+            font-size: 12px;
+            color: #aaa;
+        }
 
-.quick-box h3 {
-    font-size: 16px;
-}
+        .action-button {
+            background-color: #6a1b9a;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
 
-.quick-box p {
-    font-size: 12px;
-    color: #aaa;
-}
+        /* Emergency Contacts */
+        .emergency-box {
+            background-color: #222;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
 
-.action-button {
-    background-color: #6a1b9a;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
+        .button-group {
+            margin-top: 10px;
+        }
 
-/* Emergency Contacts */
-.emergency-box {
-    background-color: #222;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 20px;
-}
+        .border-button {
+            background: none;
+            border: 1px solid #6a1b9a;
+            color: #b39ddb;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-.button-group {
-    margin-top: 10px;
-}
+        /* Search Box */
+        .search-box {
+            margin-top: 20px;
+        }
 
-.border-button {
-    background: none;
-    border: 1px solid #6a1b9a;
-    color: #b39ddb;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        .search-box input {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            background-color: #444;
+            color: white;
+        }
+        .buttons {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6a1b9a; /* Purple background */
+            color: white; /* White text */
+            text-decoration: none; /* Removes underline */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 5%;
+        }
 
-/* Search Box */
-.search-box {
-    margin-top: 20px;
-}
-
-.search-box input {
-    width: 100%;
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    background-color: #444;
-    color: white;
-}
-.buttons {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #6a1b9a; /* Purple background */
-    color: white; /* White text */
-    text-decoration: none; /* Removes underline */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 20px;
-}
-
-.buttons:hover {
-    background-color: #4a148c; /* Darker purple on hover */
-}
+        .buttons:hover {
+            background-color: #4a148c; /* Darker purple on hover */
+        }
+        .logo {
+            width: 100%; /* Adjust width if needed */
+            height: 100%;
+        }
+        .logo-container {
+            padding: 5px;
+        }
+        h1 {
+            margin-bottom: 5px; /* Reduce space below heading */
+        }
+        .subtitle {
+            margin-top: 30%; /* Remove unnecessary space */
+        }
+        .sos-container {
+            margin-top: 0%; /* Reduce gap above SOS button */
+        }
+        .logo {
+            max-width: 100%; /* Ensure it scales properly */
+            height: auto; /* Maintain aspect ratio */
+        }
+        body {
+            margin:0;
+            padding: 15px
+        }
+        .logo-container {
+            align-items: top;
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10;
+            text-align: center;
+        }
