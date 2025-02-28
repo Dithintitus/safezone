@@ -19,6 +19,16 @@
         </div>
         
         <p class="tap-text">Tap for immediate assistance</p>
+        <div class="emergency-box">
+            <h3>Emergency helpline</h3>
+            <p>Configure people to notify during emergencies</p>
+            
+                <button onclick="callpolice()" style="padding: 15px 20px; font-size: 18px; background: red; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                     Call Police
+                </button>
+        
+            
+        </div>
 
         <!-- Safety Alerts -->
         <div class="section">
@@ -45,20 +55,13 @@
         
 
         <!-- Emergency Contacts -->
-        <div class="emergency-box">
-            <h3>Emergency Contacts</h3>
-            <p>Configure people to notify during emergencies</p>
-            <div class="button-group">
-                <button class="action-button">Manage</button>
-                <button class="border-button">Test Alert</button>
-            </div>
-        </div>
+        
 
     </div>
     <!-- Leaflet.js JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <!-- Link to External JavaScript -->
     <script src="script.js"></script>
-
+    <script src="./call112.js"></script>
 </body>
 </html>
