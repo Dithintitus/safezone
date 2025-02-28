@@ -8,16 +8,16 @@ document.getElementById("sos-btn").addEventListener("click", function() {
             var locationLink = `https://www.google.com/maps?q=${lat},${lon}`;
 
             // Emergency contact number (change this)
-            var emergencyNumber = "916282672737";  // Replace with actual emergency contact number
+            var emergencyNumber = "91XXXXXXXXXX";  // Replace with actual emergency contact number
 
             // Message to send
             var message = `🚨 HELP! I am in danger. My live location: ${locationLink}`;
 
-            // SMS URI Scheme
-            var smsLink = `sms:${emergencyNumber}?body=${encodeURIComponent(message)}`;
+            // WhatsApp API Link
+            var whatsappLink = `https://wa.me/${emergencyNumber}?text=${encodeURIComponent(message)}`;
 
-            // Open the SMS app with the pre-filled message
-            window.location.href = smsLink;
+            // Open WhatsApp automatically
+            window.open(whatsappLink, "_blank");
 
         }, function(error) {
             alert("Geolocation failed: " + error.message);
