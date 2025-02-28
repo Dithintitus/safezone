@@ -145,3 +145,21 @@ h1 {
     background-color: #444;
     color: white;
 }
+.buttons {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6a1b9a; /* Purple background */
+    color: white; /* White text */
+    text-decoration: none; /* Removes underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
+
+.buttons:hover {
+    background-color: #4a148c; /* Darker purple on hover */
+}
