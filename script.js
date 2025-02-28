@@ -8,7 +8,7 @@ document.getElementById("sos-btn").addEventListener("click", function() {
             var locationLink = `https://www.google.com/maps?q=${lat},${lon}`;
 
             // Emergency contact number (change this)
-            var emergencyNumber = "91XXXXXXXXXX";  // Replace with actual emergency contact number
+            var emergencyNumber = "916282672737";  // Replace with actual emergency contact number
 
             // Message to send
             var message = `🚨 HELP! I am in danger. My live location: ${locationLink}`;
