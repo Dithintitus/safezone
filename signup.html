@@ -3,27 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Set Emergency Contact</title>
+    <title>Set Emergency Contacts</title>
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    <h2>Set Your Emergency Contact</h2>
-    <input type="text" id="whatsapp-number" placeholder="Enter WhatsApp Number(With country code (91)">
-    <button onclick="saveNumber()">Save Number</button>
+    <h2>Set Your Emergency Contacts</h2>
+    <input type="text" id="whatsapp-number" placeholder="Enter WhatsApp Number (With country code, e.g., 91XXXXXXXXXX)">
+    <button onclick="saveNumber()">Add Contact</button>
+    <button onclick="clearAllContacts()">Clear All Contacts</button>
     <a href="./index.html"><button>Back to site</button></a>
     
+    <h3>Saved Contacts</h3>
+    <ul id="contact-list"></ul>
+
     <script>
+        document.addEventListener("DOMContentLoaded", loadContacts);
+
         function saveNumber() {
             let number = document.getElementById("whatsapp-number").value.trim();
-            
             
             if (!/^\d+$/.test(number)) {
                 alert("Please enter a valid WhatsApp number (digits only, no + or -).");
                 return;
             }
 
-            localStorage.setItem("emergencyNumber", number);
-            alert("Emergency contact saved!");
+            let contacts = JSON.parse(localStorage.getItem("emergencyContacts")) || [];
+
+            // Prevent duplicate entries
+            if (contacts.includes(number)) {
+                alert("This number is already saved!");
+                return;
+            }
+
+            contacts.push(number);
+            localStorage.setItem("emergencyContacts", JSON.stringify(contacts));
+
+            // Clear the input field after adding
+            document.getElementById("whatsapp-number").value = "";
+
+            alert("Emergency contact added successfully!");
+            loadContacts();
+        }
+
+        function loadContacts() {
+            let contacts = JSON.parse(localStorage.getItem("emergencyContacts")) || [];
+            let list = document.getElementById("contact-list");
+
+            list.innerHTML = "";
+            contacts.forEach((contact, index) => {
+                let li = document.createElement("li");
+                li.innerHTML = `${contact} <button onclick="removeContact(${index})">Remove</button>`;
+                list.appendChild(li);
+            });
+        }
+
+        function removeContact(index) {
+            let contacts = JSON.parse(localStorage.getItem("emergencyContacts")) || [];
+            contacts.splice(index, 1);
+            localStorage.setItem("emergencyContacts", JSON.stringify(contacts));
+            loadContacts();
+        }
+
+        function clearAllContacts() {
+            localStorage.removeItem("emergencyContacts");
+            loadContacts();
+            alert("All emergency contacts have been cleared!");
         }
     </script>
 </body>
