@@ -179,3 +179,8 @@
             width: 10;
             text-align: center;
         }
+        .lo{
+            text-align: right;
+            padding-left: 350px;
+            color: #1b9a94;
+        }
