@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafeZone - Emergency Assistance</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style5.css">
+    <script defer src="script5.js"></script>
 </head>
 <body>
 
@@ -13,7 +15,12 @@
             <img src="./images/logo.png" alt="SafeZone Logo" class="logo">
         </div>
         <p class="subtitle">Emergency Assistance</p>
-        
+        <div class="container">
+            <p id="statusMessage"></p>
+    
+            <button id="instructionBtn" class="button">Read Instructions</button>
+            <button id="signUpBtn" class="button" disabled>Sign Up</button>
+        </div>
         <div class="sos-container">
             <button class="sos-button" id="sos-btn">SOS</button>
         </div>
@@ -26,11 +33,10 @@
                 <button onclick="callpolice()" style="padding: 15px 20px; font-size: 18px; background: red; color: white; border: none; border-radius: 5px; cursor: pointer;">
                      Call Police
                 </button>
-        
-            
         </div>
+        
 
-        <!-- Safety Alerts -->
+
         <div class="section">
             <h2>Safety Alerts</h2>
             <div class="status-box">
@@ -38,8 +44,8 @@
                 <input type="checkbox" class="toggle-switch" checked>
             </div>
         </div>
-        <a href="./signup.html" class="buttons">Set Emergency Contact</a>
-        <!-- Quick Access -->
+                <a href="./signup.html" class="buttons">Set Emergency Contact</a>
+
         <div class="grid-container">
             <div class="quick-box">
                 <h3>Self Defense</h3>
@@ -54,13 +60,11 @@
         </div>
         
 
-        <!-- Emergency Contacts -->
         
 
     </div>
-    <!-- Leaflet.js JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <!-- Link to External JavaScript -->
+
     <script src="script.js"></script>
     <script src="./call112.js"></script>
 </body>

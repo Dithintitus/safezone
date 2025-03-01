@@ -2,87 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login page</title>
-    <style>
-        body {
-            text-align: center;
-            background-image: url('back.jpg');
-            background-size: cover; /* Ensure the background image covers the whole body */
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-            color: ;
-        }
-
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        .roundedbox {
-            width: 350px;
-            height: auto; /* Auto height based on content */
-            padding: 40px;
-            background-color: rgba(95, 99, 103, 0.3); /* Opacity on background */
-            border-radius: 15px;
-            color: black;
-        }
-
-        .label {
-            display: block;
-            margin-bottom: 8px;
-            text-align: left;
-        }
-
-        input[type="email"],
-        input[type="tel"],
-        button[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            box-sizing: border-box;
-        }
-
-        button[type="submit"] {
-            background-color:rgba(18, 147, 100);
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        small {
-            display: block;
-            margin-bottom: 15px;
-            font-size: 12px;
-            color: rgba(1, 1, 1);
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions</title>
+    <link rel="stylesheet" href="style5.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+
     <div class="container">
-        <div class="roundedbox">
-            <h1>Welcome!</h1>
-            <small>Please enter your details</small>
-            <form action="/submit" method="post">
-                <label for="email" class="label">Email address</label>
-                <input type="email" id="email" name="email" placeholder="example@domain.com" required><br>
+        <h2>Instructions</h2>
+        <p>Read these instructions carefully before signing up.</p>
+        <ul>
+            <li>Ensure that you provide accurate details.</li>
+            <li>By signing up, you agree to the terms and conditions.</li>
+            <li>Your account will be remembered for future sessions.</li>
+        </ul>
 
-                <label for="mobile" class="label">Mobile Number</label>
-                <input type="tel" id="mobile" class="input" placeholder="Enter your mobile number" required><br>
-
-                <button type="submit">Sign up</button>
-            </form>
-        </div>
+        <button id="acknowledgeBtn" class="button">I Understand</button>
     </div>
+
 </body>
 </html>

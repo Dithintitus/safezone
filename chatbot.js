@@ -5,8 +5,8 @@ async function sendMessage() {
     let userMessage = `<div class="user-message">${userInput}</div>`;
     chatBox.innerHTML += userMessage;
 
-    // API Request
-    let apiKey = "YOUR_OPENAI_API_KEY"; // Replace with your key
+    
+    let apiKey = "YOUR_OPENAI_API_KEY"; 
     let apiUrl = "https://api.openai.com/v1/chat/completions";
 
     let requestBody = {
@@ -33,5 +33,5 @@ async function sendMessage() {
         chatBox.innerHTML += `<div class="bot-message">⚠️ Error: Could not get response.</div>`;
     }
 
-    document.getElementById("user-input").value = ""; // Clear input
+    document.getElementById("user-input").value = ""; 
 }
