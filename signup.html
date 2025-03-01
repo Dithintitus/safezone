@@ -3,28 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Set Emergency Contact</title>
-    <link rel="stylesheet" href="style2.css">
+    <title>Settings - Emergency Contacts</title>
+    <script defer src="settings.js"></script>
 </head>
 <body>
-    <h2>Set Your Emergency Contact</h2>
-    <input type="text" id="whatsapp-number" placeholder="Enter WhatsApp Number(With country code (91)">
-    <button onclick="saveNumber()">Save Number</button>
-    <a href="./index.html"><button>Back to site</button></a>
-    
-    <script>
-        function saveNumber() {
-            let number = document.getElementById("whatsapp-number").value.trim();
-            
-            // Validate the number (Only digits, no + or -)
-            if (!/^\d+$/.test(number)) {
-                alert("Please enter a valid WhatsApp number (digits only, no + or -).");
-                return;
-            }
+    <h2>Emergency Contacts</h2>
+    <input type="text" id="contact-input" placeholder="Enter phone number (e.g., +919876543210)">
+    <button onclick="addContact()">Add Contact</button>
 
-            localStorage.setItem("emergencyNumber", number);
-            alert("Emergency contact saved!");
-        }
-    </script>
+    <h3>Saved Contacts:</h3>
+    <ul id="contact-list"></ul>
+
+    <button onclick="clearContacts()">Clear All Contacts</button>
 </body>
 </html>

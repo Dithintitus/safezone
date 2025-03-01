@@ -19,15 +19,13 @@
         </div>
         
         <p class="tap-text">Tap for immediate assistance</p>
+
         <div class="emergency-box">
-            <h3>Emergency helpline</h3>
+            <h3>Emergency Helpline</h3>
             <p>Configure people to notify during emergencies</p>
-            
-                <button onclick="callpolice()" style="padding: 15px 20px; font-size: 18px; background: red; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                     Call Police
-                </button>
-        
-            
+            <button onclick="callpolice()" style="padding: 15px 20px; font-size: 18px; background: red; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Call Police
+            </button>
         </div>
 
         <!-- Safety Alerts -->
@@ -38,7 +36,17 @@
                 <input type="checkbox" class="toggle-switch" checked>
             </div>
         </div>
-        <a href="./signup.html" class="buttons">Set Emergency Contact</a>
+
+        <!-- Emergency Contacts Section -->
+        <div class="emergency-contacts">
+            <h2>Emergency Contacts</h2>
+            <input type="text" id="contact-input" placeholder="Enter phone number (e.g., +919876543210)">
+            <button onclick="addContact()" class="buttons">Add Contact</button>
+
+            <ul id="contact-list"></ul>
+            <button onclick="clearContacts()" class="buttons">Clear All Contacts</button>
+        </div>
+
         <!-- Quick Access -->
         <div class="grid-container">
             <div class="quick-box">
@@ -52,18 +60,18 @@
                 <a href="./chat.html"><button class="action-button">Chat</button></a>
             </div>
         </div>
+
         <button onclick="startFakeCall()" class="buttons">Fake Call</button>
         <button onclick="stopFakeCall()" class="buttons">Answer</button> 
 
-        <!-- Emergency Contacts -->
-        
-
     </div>
+
     <!-- Leaflet.js JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <!-- Link to External JavaScript -->
     <script src="script.js"></script>
     <script src="./call112.js"></script>
     <script src="./fakecall.js"></script>
+    <script src="./contacts.js"></script> <!-- New script for managing contacts -->
 </body>
 </html>

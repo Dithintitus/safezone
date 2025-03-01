@@ -18,10 +18,7 @@ function addContact() {
     contacts.push(input);
     localStorage.setItem("emergencyContacts", JSON.stringify(contacts));
 
-    // Clear the input field after adding
     document.getElementById("contact-input").value = "";
-
-    alert("Contact added successfully!");
     loadContacts();
 }
 
@@ -47,5 +44,4 @@ function removeContact(index) {
 function clearContacts() {
     localStorage.removeItem("emergencyContacts");
     loadContacts();
-    alert("All contacts have been cleared!");
 }
